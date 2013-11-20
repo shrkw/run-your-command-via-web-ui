@@ -1,0 +1,16 @@
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.navbar {
+  margin-bottom: 20px;
+}
+
+div#running-now, div.input-warning, div.alert-success {
+  display: none;
+}
+
+button.start {
+  margin-top: 10px;
+}
