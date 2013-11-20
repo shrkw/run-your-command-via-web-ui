@@ -44,8 +44,10 @@ io.sockets.on("connection", function (socket) {
   log("connected");
 
   socket.on("run", function (data) {
+    name = data.value;
+    log(name);
     var spawn = require('child_process').spawn,
-        cmd = spawn('/bin/sh', ['scripts/run.sh']);
+        cmd = spawn('/bin/sh', ['scripts/run.sh', name]);
     cmd.stdout.setEncoding('utf8');
     cmd.stdout.on('data', function(data) {
       console.log('stdout: ' + data);

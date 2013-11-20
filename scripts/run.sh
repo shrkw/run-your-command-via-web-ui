@@ -1,9 +1,9 @@
 #!/bin/sh
 
-sleep 10
-echo abc
+sleep 3
+echo 1.$1
 
-sleep 10
-echo def
+sleep 3
+echo 2.$1
 
 exit 0
