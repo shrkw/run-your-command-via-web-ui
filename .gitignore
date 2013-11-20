@@ -1,3 +1,6 @@
+public/vendor
+
+############################
 lib-cov
 *.seed
 *.log
