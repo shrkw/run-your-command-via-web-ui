@@ -1,6 +1,8 @@
 run-your-command-via-web-ui
 ===========================================
 
+[![Dependency Status](https://david-dm.org/shrkw/run-your-command-via-web-ui.png)]
+
 **Important notice**
 
 *This application expects to work for internal network and faithful guys only.*
