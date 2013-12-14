@@ -1,7 +1,7 @@
 run-your-command-via-web-ui
 ===========================================
 
-[![Dependency Status](https://david-dm.org/shrkw/run-your-command-via-web-ui.png)]
+![Dependency Status](https://david-dm.org/shrkw/run-your-command-via-web-ui.png)
 
 **Important notice**
 
