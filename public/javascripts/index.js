@@ -1,5 +1,5 @@
 $(function() {
-  var s = io.connect('http://localhost:3000');
+  var s = io.connect('/');
   s.on("connect", function () {
     console.log("connected");
   });
