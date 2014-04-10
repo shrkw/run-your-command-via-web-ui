@@ -1,28 +1,23 @@
-/**
- * Module dependencies.
- */
-
 var express = require('express');
 var http = require('http');
 var path = require('path');
 var socketio = require("socket.io");
+var logger = require('morgan');
+var serveStatic = require('serve-static');
+var errorhandler = require('errorhandler');
 
-// var app = express();
+var port = process.env.PORT || 3000;
+var env = process.env.NODE_ENV || 'development';
+
 var app = module.exports = express();
+app.set('port', port);
+app.set('env', env);
 
-// all environments
-app.set('port', process.env.PORT || 3000);
-app.use(express.favicon());
-app.use(express.logger('dev'));
-app.use(express.json());
-app.use(express.urlencoded());
-app.use(express.methodOverride());
-app.use(app.router);
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(serveStatic(path.join(__dirname, 'public')));
+app.use(logger('dev'));
 
-// development only
-if ('development' == app.get('env')) {
-  app.use(express.errorHandler({
+if ('development' == env) {
+  app.use(errorhandler({
     dumpExceptions: true,
     showStack: true
   }));
@@ -41,7 +36,7 @@ var io = socketio.listen(server);
 var log = console.log;
 
 io.sockets.on("connection", function (socket) {
-  log("connected");
+  console.log("connected");
 
   socket.on("run", function (data) {
     name = data.value;
