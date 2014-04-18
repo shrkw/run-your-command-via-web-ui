@@ -1,4 +1,6 @@
 public/vendor
+public/javascripts/*.js
+public/stylesheets/*.css
 
 ############################
 lib-cov
