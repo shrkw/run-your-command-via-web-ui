@@ -23,14 +23,21 @@ Install nodebrew and Node.js
     nodebrew install stable
     nodebrew use stable
 
-Intall bower::
+Intall bower and grunt-cli::
 
     npm install -g bower
+    npm install -g grunt-cli
 
 ## Resolve project dependencies
 
     npm install
     bower install
+
+# Compile meta files
+
+    grunt compile
+
+Grunt default task is `watch`.
 
 # Run
 
